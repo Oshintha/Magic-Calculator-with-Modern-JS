@@ -52,8 +52,19 @@ while (userWantsToContinue) {
     console.log("\n")
     //exit process and massage
     if (operation === "exit") {
-        console.log("Exiting. Goodbye!");
+        console.log("Exiting. Goodbye!\n");
         break;
+    }
+    else if (operation === "magic") {
+        //Declare variable
+        let num1 = parseFloat(prompt("Enter the number: "));
+        console.log(magicOperation(num1));
+        continue;
+    }
+    else if  (operation !== "add" && operation !== "subtract" && operation !== "multiply" && operation !== "divide"){
+        //Print error massage if user enter a invalid operations
+        console.log("Invalid Operation. Please select correct operation form the list.\n");
+        continue;
     }
     let num1 = parseFloat(prompt("Enter first number: "));
     let num2 = parseFloat(prompt("Enter second number: "));
